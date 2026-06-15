@@ -38,3 +38,13 @@
   - shorten prompts
   - route easy requests to cheaper model
   - apply prompt cache
+
+## 4. Low Quality Score
+- Severity: P2
+- Trigger: \quality_score_avg < 0.75 for 1h\`n- Impact: User satisfaction drops
+- First checks:
+  1. Check recent prompt updates.
+  2. Check the logs for REDACTED fields breaking context.
+- Mitigation:
+  - Revert prompt changes.
+  - Adjust PII scrubber if too aggressive.
